@@ -34,6 +34,14 @@ class StringCalculatorTest {
         assertEquals(1000003, StringCalculator.add("3,1000000"));
     }
 
+    @Test
+    void testLargeNumberWithNegativeReturnsSum() {
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+            StringCalculator.add("2,-4000,3,-5");
+        });
+        assertEquals("Negatives not allowed: -4000, -5", exception.getMessage());
+    }
+
 
     @Test
     void testNewlineDelimiter() {
