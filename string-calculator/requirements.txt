@@ -1,0 +1,5 @@
+Below are the requirements that we will need to run the String Calculator
+
+1. Java
+2. JDK
+3. Junit 
